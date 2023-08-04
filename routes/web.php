@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,8 +20,10 @@ Route::get('/', function () {
     dump("mysql", $user);
 
     return view('welcome');
-});
+});//http://localhost:8000/
 
+
+Route::get('/test1',[TestController::class,'test1']);//http://localhost:8000/test1
 
 
 
