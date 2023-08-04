@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $user = DB::select('select * from users where id=?', [1]);
+
+    dump("mysql", $user);
+
     return view('welcome');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
